@@ -166,8 +166,6 @@ function forHourWeather(response, mainDiv) {
         newELem1.appendChild(foreCastDiv);
     }
     mainDiv.appendChild(newELem1);
-
-
 }
 
 function forDaysWeather(response, mainDiv) {
@@ -177,8 +175,6 @@ function forDaysWeather(response, mainDiv) {
     for (let i = 0; i < response.data.forecast.forecastday.length; i++) {
         let foreCastlist = document.createElement('li');
         foreCastlist.setAttribute('class', 'ForDays');
-
-
 
         let foreCastlistDiv1 = document.createElement('div');
         foreCastlistDiv1.setAttribute('class', 'ForDaysDiv1')
@@ -213,6 +209,7 @@ function forDaysWeather(response, mainDiv) {
         let textdateInDiv3 = document.createTextNode(`${response.data.forecast.forecastday[i].date}`)
         dateInDiv3.appendChild(textdateInDiv3)
 
+        
         foreCastlistDiv1.appendChild(tempInDiv1)
         foreCastlistDiv1.appendChild(nameInDiv1)
         foreCastlistDiv1.appendChild(placeInDiv1)
@@ -260,7 +257,6 @@ function forDaysWeather(response, mainDiv) {
         }
         foreCastlist.appendChild(foreCastDiv4)
         newELem2.appendChild(foreCastlist);
-
     }
     mainDiv.appendChild(newELem2)
 }
